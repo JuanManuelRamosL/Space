@@ -38,34 +38,3 @@ npm start
 Uso
 Pantalla de inicio:
 
-Muestra un resumen de las características principales de la aplicación.
-Clima de Marte:
-
-Muestra datos en tiempo real del clima en Marte utilizando la API de la NASA.
-Misiones de SpaceX:
-
-Proporciona detalles sobre las misiones de SpaceX, incluyendo fechas de lanzamiento, detalles del cohete y más.
-Estructura del Proyecto
-css
-Copiar código
-space-explorer/
-├── src/
-│   ├── components/
-│   │   ├── MarsWeather.js
-│   │   ├── SpaceXMissions.js
-│   ├── navigation/
-│   │   ├── AppNavigator.js
-│   ├── screens/
-│   │   ├── HomeScreen.js
-│   │   ├── MarsWeatherScreen.js
-│   │   ├── SpaceXMissionsScreen.js
-│   ├── services/
-│   │   ├── nasaApi.js
-│   │   ├── spacexApi.js
-│   ├── styles/
-│   │   ├── styles.js
-│   ├── App.js
-│   ├── env.js
-├── .gitignore
-├── package.json
-├── README.md

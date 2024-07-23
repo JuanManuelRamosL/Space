@@ -9,7 +9,7 @@ export default function App() {
     <>
     <StatusBar
     barStyle="light-content" // Cambia el estilo del texto de la barra de estado a blanco
-    
+     backgroundColor="#000000"
 
   />
 

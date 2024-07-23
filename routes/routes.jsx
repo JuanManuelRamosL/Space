@@ -9,6 +9,7 @@ import Clima from "../src/components/climaMarciano";
 import Capsules from "../src/components/capsulas";
 import Dragons from "../src/components/Dragons";
 import Plataforms from "../src/components/lanzadores";
+import Despegues from "../src/components/misiones";
 
 const Stack = createNativeStackNavigator();
 const rootStyles = {
@@ -29,6 +30,11 @@ const Routes = () => {
         <Stack.Screen
           name="Asteroides"
           component={Asteroides}
+          options={rootStyles}
+        />
+        <Stack.Screen
+          name="Despegues"
+          component={Despegues}
           options={rootStyles}
         />
         <Stack.Screen

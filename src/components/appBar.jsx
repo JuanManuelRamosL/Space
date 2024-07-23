@@ -22,9 +22,19 @@ const AppBar = () => {
   const handleNavDragons = () => {
     navigation.navigate("Satelites");
   };
+  const handleNavDespegues = () => {
+    navigation.navigate("Despegues");
+  };
   return (
     <View style={styles.appBar}>
       <TouchableOpacity style={styles.appBarButton} onPress={handleNav}>
+        <Ionicons name="planet-outline" size={24} color="#ffffff" />
+        <Text style={styles.appBarButtonText}></Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.appBarButton}
+        onPress={handleNavDespegues}
+      >
         <Ionicons name="planet-outline" size={24} color="#ffffff" />
         <Text style={styles.appBarButtonText}></Text>
       </TouchableOpacity>
@@ -32,10 +42,10 @@ const AppBar = () => {
         <FontAwesome5 name="space-shuttle" size={24} color="#ffffff" />
         <Text style={styles.appBarButtonText}></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.appBarButton} onPress={handleNavClima}>
+      {/*   <TouchableOpacity style={styles.appBarButton} onPress={handleNavClima}>
         <Ionicons name="cloud-outline" size={24} color="#ffffff" />
         <Text style={styles.appBarButtonText}></Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <TouchableOpacity style={styles.appBarButton} onPress={handleNavDragons}>
         <FontAwesome5 name="satellite" size={24} color="#ffffff" />
         <Text style={styles.appBarButtonText}></Text>

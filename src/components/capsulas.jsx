@@ -54,7 +54,6 @@ const Capsules = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <CircleLogos />
       <AppBar />
       <Text style={styles.title}>SpaceX Capsules</Text>
       {capsules.map((capsule) => (

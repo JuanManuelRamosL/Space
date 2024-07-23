@@ -7,7 +7,7 @@ const CircleLogos = () => {
       <View style={styles.logoContainer}>
         <Image
           source={{
-            uri: "https://w7.pngwing.com/pngs/504/395/png-transparent-logo-nasa-insignia-design-graphics-nasa-miscellaneous-blue-pin.png",
+            uri: "https://wallpapers.com/images/hd/n-a-s-a-logo-vector-jeeukd3n89gdpppp.jpg",
           }} // Reemplaza con la URL del primer logo
           style={styles.logo}
         />
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000",
   },
   logoContainer: {
-    width: 60,
+    width: 80,
     height: 60,
     borderRadius: 30, // Hace el contenedor circular
     overflow: "hidden", // Asegura que la imagen no se salga del contenedor circular
@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    width: 60,
-    height: 60,
+    width: 58,
+    height: 58,
     borderRadius: 30, // Hace la imagen circular
   },
   logo2: {
-    width: 60,
-    height: 60,
-    borderRadius: 30, // Hace la imagen circular
+    width: 110,
+    aspectRatio: 1, // Mantiene la relación de aspecto
+    height: "auto", // Ajusta la altura automáticamente según el ancho
   },
 });
 

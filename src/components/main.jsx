@@ -13,6 +13,7 @@ import axios from "axios";
 import useStore from "../../store";
 import AppBar from "./appBar";
 import CircleLogos from "./logos";
+import SimpleComponent from "./cuerpo";
 
 const Main = () => {
   const [loading, setLoading] = useState(true);
@@ -70,6 +71,7 @@ const Main = () => {
             <Text style={styles.cardText}>{data.explanation}</Text>
           </View>
         </View>
+        <SimpleComponent></SimpleComponent>
       </ScrollView>
     </SafeAreaView>
   );
@@ -132,7 +134,8 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 16,
     color: "#FFF",
-    textAlign: "center",
+    textAlign: "start",
+    lineHeight: 22,
   },
 });
 

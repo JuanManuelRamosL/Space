@@ -6,10 +6,12 @@ import {
   FlatList,
   Image,
   Linking,
-  Button,
+  TouchableOpacity,
 } from "react-native";
 import axios from "axios";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import AppBar from "./appBar";
 
 const Despegues = () => {
   const [launches, setLaunches] = useState([]);
@@ -49,8 +51,14 @@ const Despegues = () => {
     );
   }
 
+  const navigation = useNavigation();
+  const handleNavDetail = (item) => {
+    navigation.navigate("detalle-mision", { item });
+  };
+
   return (
     <SafeAreaView style={styles.container}>
+      <AppBar />
       <FlatList
         data={launches}
         keyExtractor={(item) => item.id}
@@ -65,11 +73,19 @@ const Despegues = () => {
               Fecha: {new Date(item.date_utc).toLocaleDateString()}
             </Text>
             <Text style={styles.text}>Detalles: {item.details}</Text>
-            <Button
-              title="Ver en Wikipedia"
+            <TouchableOpacity
+              style={styles.button}
               onPress={() => Linking.openURL(item.links.wikipedia)}
               disabled={!item.links.wikipedia}
-            />
+            >
+              <Text style={styles.buttonText}>Ver en Wikipedia</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleNavDetail(item)}
+            >
+              <Text style={styles.buttonText}>Detalles</Text>
+            </TouchableOpacity>
           </View>
         )}
       />
@@ -88,6 +104,7 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: "#1e1e1e",
     borderRadius: 10,
+    marginTop: 20,
   },
   image: {
     width: 100,
@@ -112,6 +129,19 @@ const styles = StyleSheet.create({
   errorText: {
     fontSize: 18,
     color: "#ff0000",
+  },
+  button: {
+    backgroundColor: "#0061c6",
+    padding: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    marginTop: 10, // Para la separación
+    width: "70%",
+    marginLeft: 50, // Ancho completo del contenedor padre
+  },
+  buttonText: {
+    color: "#ffffff",
+    fontSize: 16,
   },
 });
 

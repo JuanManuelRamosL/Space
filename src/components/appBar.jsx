@@ -35,7 +35,7 @@ const AppBar = () => {
         style={styles.appBarButton}
         onPress={handleNavDespegues}
       >
-        <Ionicons name="planet-outline" size={24} color="#ffffff" />
+        <FontAwesome5 name="clipboard-list" size={24} color="#ffffff" />
         <Text style={styles.appBarButtonText}></Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.appBarButton} onPress={handleNavLanzador}>

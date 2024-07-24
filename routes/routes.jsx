@@ -10,6 +10,7 @@ import Capsules from "../src/components/capsulas";
 import Dragons from "../src/components/Dragons";
 import Plataforms from "../src/components/lanzadores";
 import Despegues from "../src/components/misiones";
+import ItemDetail from "../src/components/Detalle-mision";
 
 const Stack = createNativeStackNavigator();
 const rootStyles = {
@@ -57,6 +58,11 @@ const Routes = () => {
         <Stack.Screen
           name="Lanzadores"
           component={Plataforms}
+          options={rootStyles}
+        />
+        <Stack.Screen
+          name="detalle-mision"
+          component={ItemDetail}
           options={rootStyles}
         />
       </Stack.Navigator>
